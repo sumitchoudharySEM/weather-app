@@ -1,13 +1,89 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.mainBg{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.mainBg img{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+.buller{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(1, 0, 68, 0.368);
+}
+.container{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  
+}
+.container .leftBox{
+  width: 50%;
+  height: 100%;
+  background-color: rgba(143, 32, 32, 0.456);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.container .rightBox{
+  width: 50%;
+  height: 100%;
+  background-color: rgba(10, 98, 5, 0.456);
+}
+.side1{
+  width: 70%;
+  height: 90%;
+  background-color: rgba(40, 160, 160, 0.629);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.side2{
+  width: 30%;
+  height: 90%;
+  background-color: rgba(156, 109, 48, 0.448);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.datebox{
+ width: 80%;
+ height: 25%;
+ background-color: rgba(0, 0, 0, 0.419);
+ margin: 1.5rem;
+}
+.searchbox{
+ width: 80%;
+ height: 15%;
+ background-color: rgba(0, 0, 0, 0.51);
+ margin: 2rem;
+}
+.motobox{
+ width: 80%;
+ height: 22%;
+ background-color: rgba(0, 0, 0, 0.53);
+ margin: 2rem;
+}
+.moreon{
+  width: 90%;
+  height: 10%;
+  background-color: rgba(0, 0, 0, 0.451);
 }
