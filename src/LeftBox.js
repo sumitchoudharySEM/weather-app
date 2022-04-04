@@ -2,6 +2,7 @@ import { FaSearchLocation } from 'react-icons/fa';
 import { BiCurrentLocation } from 'react-icons/bi';
 import React, { useEffect, useRef, useState } from 'react';
 import VanillaTilt from 'vanilla-tilt';
+import moment from 'moment';
 
 function Tilt(props) {
     const { options, ...rest } = props;
@@ -25,7 +26,7 @@ const LeftBox = () => {
     };
     const HandleSubmit = (e) => {
         e.preventDefault();
-        const myCity =city;
+        const myCity = city;
         console.log(myCity);
     }
 
@@ -33,6 +34,12 @@ const LeftBox = () => {
         <div className="side1">
             <Tilt className="datebox" options={options} >
                 <img src={require("./img/logo.png")}></img>
+                <h2>{moment().format('MMMM')}
+                    <span>{moment().format('yyyy')}</span>
+                </h2>
+                <div className="datehover">
+                    <div className='span1'>{moment().format('DD')}</div>
+                </div>
             </Tilt>
             <div className='searchbox'>
                 <form onClick={HandleSubmit}>
@@ -47,11 +54,12 @@ const LeftBox = () => {
                         <button
                             className="searchbutten"
                             type='submit'
-                            
+
                         >
                             <FaSearchLocation />
                         </button>
                         <button className='btn2'> <BiCurrentLocation /> Use myLocation : {city} </button>
+
                     </div>
 
                 </form>
@@ -60,10 +68,10 @@ const LeftBox = () => {
         </div>
         <div className="side2">
             <h2>see more on weather</h2>
-            <div className='moreon'></div>
-            <div className='moreon'></div>
-            <div className='moreon'></div>
-            <div className='moreon'></div>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
 
         </div>
     </>
