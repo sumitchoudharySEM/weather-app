@@ -93,7 +93,7 @@ body {
 }
 .datebox{
  width: 80%;
- height: 30%;
+ height: 40%;
  margin: 1.5rem;
  background-color: var(--white);
  border-radius: 20px;
@@ -115,6 +115,60 @@ body {
  border-radius: 20px;
  backdrop-filter: blur(6px);
  box-shadow: 2px 2px 5px  var(--blue);
+}
+.searchbox .input{
+ width: 100%;
+ height: 10%;
+ font-size: 20px;
+ font-weight: 500;
+ margin: 10px 5px;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+ justify-content: center;
+}
+.searchbox .input input{
+ width: 80%;
+ height: 10%;
+ font-size: 20px;
+ font-weight: 500;
+ border-radius: 20px;
+ background-color: rgba(255, 255, 255, 0.588);
+ border: none;
+ margin-top: 3px;
+ padding: 3px 10px;
+}
+.btn2{
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 20px;
+  border: none;
+  margin-top: 1rem;
+  padding: 3px 8px;
+}
+.btn2:hover{
+  background-color: rgba(255, 255, 255, 0.367);
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 20px;
+  border: none;
+  margin-top: 1rem;
+  padding: 3px 8px;
+}
+.searchbutten{
+  height: 30px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.642);
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: rgba(5, 4, 44, 0.918);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 10px;
+  margin: 0px 8px;
+  border: none;
 }
 .motobox{
  width: 80%;
