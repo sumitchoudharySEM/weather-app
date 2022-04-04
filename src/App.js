@@ -2,7 +2,12 @@ import bg from "./img/bg.webp";
 import LeftBox from "./LeftBox";
 import RightBox from "./RightBox";
 
+
+
 function App() {
+  
+  
+
   return (
     <div className="App">
       <div className="mainBg">
@@ -19,7 +24,9 @@ function App() {
           </div>
         </div>
       </div>
+      
     </div>
+
   );
 }
 
