@@ -8,8 +8,8 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 const app = (
   <StrictMode>
-      {/* <App /> */}
-      <Testapp/>
+      <App />
+      {/* <Testapp/> */}
   </StrictMode>
 );
 
