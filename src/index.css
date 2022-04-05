@@ -15,7 +15,7 @@ a{
 	letter-spacing: 4px;
 	overflow: hidden;
 	background: rgba(255,255,255,.1);
-	box-shadow: 0 5px 5px rgba(0,0,0.2);
+	box-shadow: 0 5px 7px rgba(0, 0, 0, 0.551);
 }
 a:before{
 	content: '';
