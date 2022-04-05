@@ -23,7 +23,7 @@ function App() {
   const API_KEY = process.env.REACT_APP_API_KEY;
   const [searchterm, setSearchterm] = useState('');
   const [city, setcity] = useState("weather");
-  const [weatherData, setWeatherData] = useState();
+  const [weatherData, setWeatherData] = useState([]);
   const [weathericon, setWeathericon] = useState(`${process.env.REACT_APP_ICON_URL}10n@2x.png`);
   const options = { scale: 1.1, speed: 200, max: 20, easing: "cubic-bezier(.03,.98,.52,.99)", glare: true, };
 
@@ -72,7 +72,6 @@ function App() {
   }
 
   return (
-    <div className="App">
       <div className="mainBg">
         <img src={bg} />
         <div className="buller"></div>
@@ -112,11 +111,18 @@ function App() {
                 </form>
               </div>
               <Tilt className="motobox" options={options} >
-                {!weatherData?.length === 0 ?
+                {weatherData.length === 0 ?
                   <h1 >their is no data</h1>
-                  :
-                  <div>hii </div>
+                  :<div className="data_show">
+                    <h2>{weatherData.list[0].weather[0].main} </h2>
+                    <h4>{weatherData.list[0].weather[0].description}</h4>
+                    <h3> {Math.round(weatherData.list[0].main.temp*10)/10}{'\u00b0'}C</h3>
+                    <h6> {weatherData.list[0].main.temp_min} {'\u00b0'}C - {weatherData.list[0].main.temp_max}{'\u00b0'}C </h6>
+                    <h5>Feels Like :{weatherData.list[0].main.feels_like} {'\u00b0'}C</h5>
+                  </div>
+                  
                 }
+                <h1></h1>
               </Tilt>
             </div>
             <div className="side2">
@@ -132,9 +138,6 @@ function App() {
           </div>
         </div>
       </div>
-
-    </div>
-
   );
 }
 
