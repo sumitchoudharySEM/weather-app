@@ -25,7 +25,8 @@ function App() {
   const [searchterm, setSearchterm] = useState('');
   const [city, setcity] = useState("weather");
   const [weatherData, setWeatherData] = useState([]);
-  const [weathericon, setWeathericon] = useState(`${process.env.REACT_APP_ICON_URL}10n@2x.png`);
+  const [weathericon, setWeathericon] = useState();
+  const icon = weathericon;
   const options = { scale: 1.1, speed: 200, max: 20, easing: "cubic-bezier(.03,.98,.52,.99)", glare: true, };
 
   const onChangefunction = (e) => {
@@ -57,8 +58,7 @@ function App() {
       setcity(data.city.name)
       setWeatherData(data)
       console.log(data)
-      console.log(data.city.name)
-      console.log(data.list[0].main.temp)
+       setWeathericon("http://openweathermap.org/img/wn/"+ data.list[0].weather[0].icon+ "@2x.png");
     } catch (error) {
       console.log(error)
     }
@@ -117,6 +117,7 @@ function App() {
                 <h3>serch city to get data </h3>
               </>
                 : <div className="data_show">
+                <img src={weathericon}></img>
                   <h2>{weatherData.list[0].weather[0].main} </h2>
                   <h4>{weatherData.list[0].weather[0].description}</h4>
                   <h3> {Math.round(weatherData.list[0].main.temp * 10) / 10}{'\u00b0'}C</h3>
@@ -130,6 +131,7 @@ function App() {
           </div>
           <div className="side2">
             <h2>see more on {city}</h2>
+            {/* <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" /> */}
             {weatherData.length === 0 ?
             <>
             <div>data will display heair</div>
