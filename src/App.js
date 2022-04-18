@@ -21,7 +21,7 @@ function Tilt(props) {
 
 function App() {
 
-  const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_KEY = "4ebc1805db80e6affcefa2f6a2504198";
   const [searchterm, setSearchterm] = useState('');
   const [city, setcity] = useState("weather");
   const [weatherData, setWeatherData] = useState([]);
@@ -44,7 +44,7 @@ function App() {
     setWeatherData([]);
     console.log("getweatherdetail funvtion run ho gayan hai");
     const method_result = (typeof location === 'string') ? `q=${location}` : `lat=${location[0]}&lon=${location[1]}`
-    const URL = `http://api.openweathermap.org/data/2.5/forecast?${method_result}&appid=${API_KEY}&units=metric&cnt=5&exclude=hourly,minutely`;
+    const URL = `http://api.openweathermap.org/data/2.5/forecast?${method_result}&appid=4ebc1805db80e6affcefa2f6a2504198&units=metric&cnt=5&exclude=hourly,minutely`;
     console.log(URL);
 
     try {
